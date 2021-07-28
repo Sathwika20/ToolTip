@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -23,5 +24,6 @@ public class ToolTip extends Base {
                 driver.findElement(By.xpath("//*[text()='You hovered over the Button']"));
         String tooltipText = tooltipTextOnButton.getText();
         System.out.println(tooltipText);
+        Assert.assertEquals(tooltipText,"You hovered over the Button");
     }
 }
